@@ -20,6 +20,11 @@ module.exports = {
       url: process.env.NEXT_PUBLIC_RPC_URL,
       accounts: [process.env.NEXT_PUBLIC_PRIVATE_KEY]
     }
+  },
+  etherscan: {
+    apiKey: {
+      polygonMumbai: 'T6ZRYP4Z6EM2QXUC8C4HCYIDWNSAAB4YZQ'
+    }
   }
   
 };
