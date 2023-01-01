@@ -3,6 +3,9 @@ import themes from "./themes.js";
 
 import styled,{ThemeProvider , createGlobalStyle} from 'styled-components';
 import {useState , createContext} from 'react';
+
+const App =  createContext();
+
 export const Layout = ({children})=>{
   const [theme, setTheme] = useState("light");
   
@@ -11,6 +14,7 @@ export const Layout = ({children})=>{
   };
   
   return (
+    <App.Provider value={{changeTheme, theme}}>
     <ThemeProvider theme={themes[theme]}>
     <LayoutWrapper onClick={changeTheme}>
     <Header/>
@@ -18,6 +22,7 @@ export const Layout = ({children})=>{
     {children}
     </LayoutWrapper>
     </ThemeProvider>
+    </App.Provider>
   )
 }
 
@@ -34,4 +39,8 @@ const LayoutWrapper = styled.div`
   background-color: ${(props) => props.theme.bgColor};
   background-image: ${(props) => props.theme.bgImage};
   color: ${(props) => props.theme.color};
+  
+  
 `;
+
+export {App};
