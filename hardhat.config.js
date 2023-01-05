@@ -12,7 +12,13 @@ task("accounts", "Prints the lis of accounts",async (taskArgs,hre)=>{
 /** @type import('hardhat/config').HardhatUserConfig */
 // const privetKey = process.env.NEXT_PUBLIC_PRIVATE_KEY
 module.exports = {
-  solidity: "0.8.10",
+  solidity: {
+    compilers: [
+      {version: "0.8.9"},
+      {version: "0.8.10",},
+      
+    ]
+  },
   defaultNetwork: "polygon",
   networks:{
     hardhat: {},
