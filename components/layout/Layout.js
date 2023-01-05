@@ -1,5 +1,9 @@
 import {Header} from './Header.js';
 import themes from "./themes.js";
+// import styled, { ThemeProvider, createGlobalStyle } from "styled-components";
+// import { useState, createContext } from "react";
+// import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import styled,{ThemeProvider , createGlobalStyle} from 'styled-components';
 import {useState , createContext} from 'react';
@@ -39,7 +43,6 @@ const LayoutWrapper = styled.div`
   background-color: ${(props) => props.theme.bgColor};
   background-image: ${(props) => props.theme.bgImage};
   color: ${(props) => props.theme.color};
-  
   
 `;
 

@@ -24,10 +24,13 @@ const HeaderRightWrapper = styled.div`
   justify-content: center;
   align-items: center;
   margin-right: 15px;
-  height: 60%;
+  height: 50%;
 `;
 
 const ThemeToggle = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: ${(props)=> props.theme.bgDiv};
   height: 100%;
   padding: 5px;
