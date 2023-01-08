@@ -10,8 +10,8 @@ export const HeaderRight = () => {
   return (
     <HeaderRightWrapper>
       <Wallet />
-      <ThemeToggle>
-      {ThemeToggler.theme === 'light' ? <DarkModeIcon /> : <Brightness7Icon />}
+      <ThemeToggle onClick={ThemeToggler.changeTheme}>
+        {ThemeToggler.theme === 'light' ? <DarkModeIcon /> : <Brightness7Icon />}
       </ThemeToggle>
    
     </HeaderRightWrapper>
@@ -34,7 +34,7 @@ const ThemeToggle = styled.div`
   background-color: ${(props)=> props.theme.bgDiv};
   height: 100%;
   padding: 5px;
-  width: 45px;
+  width: 35px;
   border-radius: 12px;
   cursor: pointer;
  
