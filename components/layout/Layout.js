@@ -20,7 +20,7 @@ export const Layout = ({children})=>{
   return (
     <App.Provider value={{changeTheme, theme}}>
     <ThemeProvider theme={themes[theme]}>
-    <LayoutWrapper onClick={changeTheme}>
+    <LayoutWrapper>
     <Header/>
     <GlobalStyle />
     {children}
